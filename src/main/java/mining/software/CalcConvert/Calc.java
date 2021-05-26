@@ -1,4 +1,4 @@
-package mining.software.Calculations;
+package mining.software.CalcConvert;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

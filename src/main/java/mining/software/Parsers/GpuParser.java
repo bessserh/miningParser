@@ -1,5 +1,6 @@
-package mining.software.Calculations;
+package mining.software.Parsers;
 
+import mining.software.CalcConvert.RegexpConverter;
 import mining.software.model.GpuWeb;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -15,7 +16,9 @@ public class GpuParser {
 
         List<GpuWeb> gpuListShow = new ArrayList<>();
         Document doc = null;
+
         try {
+            //TODO electricity param change
             doc = Jsoup.connect("https://whattomine.com/gpus?cost=0.06")
                     .userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0")
                     .referrer("https://www.google.com")
