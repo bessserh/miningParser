@@ -8,12 +8,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class GpuWeb {
-    //todo convert into double
-    //todo regular expressions doesn`t work, why?
 
+    //todo hash and measurement in inner class
     private String name;
-    private String infoAll;
-    private String power;
-    private String revenue;
-    private String profit;
+    private Double hashrate;
+    private String measurement;
+    private String bestAlgorithm;
+    private int power;
+    private Double revenue;
+    private Double profit;
 }

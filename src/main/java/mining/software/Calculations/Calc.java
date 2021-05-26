@@ -44,8 +44,8 @@ public class Calc {
         return convert(withoutFee - fee);
     }
 
-    //TODO окупаемость
     public long payback() {
+        //окупаемость
         return Math.round(device.getPrice() / profit());
     }
 }

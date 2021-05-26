@@ -31,14 +31,19 @@
     </nav>
 </header>
 
-<main style="margin-top: 10%">
-    <h1><span class="badge badge-secondary" th:text="#{parsed.label.title}">New</span></h1>
+<main style="margin-top: 7%">
 
     <table class="table table-hover table-bordered table-striped">
         <thead class="thead-dark">
         <tr>
+            <div style="background-color: aquamarine">
+                <h2 th:text="#{parsed.label.title}" style="margin-left: 30%">GPU</h2>
+            </div>
+        </tr>
+        <tr>
             <th scope="col" th:text="#{parsed.table.name}">name</th>
-            <th scope="col" th:text="#{parsed.table.info}">info</th>
+            <th scope="col" th:text="#{parsed.table.algorithm}">info</th>
+            <th scope="col" th:text="#{parsed.table.hashrate}">info</th>
             <th scope="col" th:text="#{parsed.table.power}">power</th>
             <th scope="col" th:text="#{parsed.table.revenue}">revenue</th>
             <th scope="col" th:text="#{parsed.table.profit}">profit</th>
@@ -46,11 +51,12 @@
         </thead>
         <tbody>
             <tr th:each="gpu : ${allGpus}">
-                <td th:text="${gpu.getName()}"></td>
-                <td th:text="${gpu.infoAll}"></td>
-                <td th:text="${gpu.power}"></td>
-                <td th:text="${gpu.revenue}"></td>
-                <td th:text="${gpu.profit}"></td>
+                <td th:text="${gpu.name}"></td>
+                <td th:text="${gpu.bestAlgorithm}"></td>
+                <td th:text="${gpu.hashrate} + ' ' + ${gpu.getMeasurement}"></td>
+                <td th:text="${gpu.power} + ' W'"></td>
+                <td th:text="${gpu.revenue} + '$'"></td>
+                <td th:text="${gpu.profit}  + '$'"></td>
             </tr>
         </tbody>
     </table>

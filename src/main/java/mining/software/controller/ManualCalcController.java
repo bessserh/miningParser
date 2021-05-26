@@ -1,7 +1,6 @@
 package mining.software.controller;
 
 import mining.software.Calculations.Calc;
-import mining.software.Calculations.GpuParser;
 import mining.software.model.Gpu;
 import mining.software.model.StartData;
 import org.springframework.stereotype.Controller;
