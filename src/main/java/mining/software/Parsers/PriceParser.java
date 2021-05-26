@@ -21,7 +21,7 @@ public class PriceParser {
 
         try {
             doc = Jsoup.connect(
-                    "https://hotline.ua/computer/videokarty/380252-560507-561949-586469-606235-612197-643445-646330/")
+                    "https://hotline.ua/computer/videokarty/380252-560507-586469-606235-612197-643445-646330/")
                         //hotline filter for mining suitable GPUs
                     .userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) " +
                             "AppleWebKit/537.36 (KHTML, like Gecko) " +

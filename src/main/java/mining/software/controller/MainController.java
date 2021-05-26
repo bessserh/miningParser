@@ -34,7 +34,7 @@ public class MainController {
 
     @GetMapping("/test")
     public String checkSelector(Model model) {
-        //only one shown
+        //only one shown, hotline selector???
         model.addAttribute("testParser", priceParser.parserPrice());
         return "priceTest";
     }
