@@ -14,7 +14,7 @@ import java.math.RoundingMode;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Calc {
+public class ManualCalc {
     private StartData data;
     private Gpu device;
 

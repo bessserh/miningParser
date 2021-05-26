@@ -20,7 +20,10 @@ public class GpuParser {
         try {
             //TODO electricity param change
             doc = Jsoup.connect("https://whattomine.com/gpus?cost=0.06")
-                    .userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0")
+                    .userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) " +
+                            "AppleWebKit/537.36 (KHTML, like Gecko) " +
+                            "Chrome/90.0.4430.212 " +
+                            "Safari/537.36")
                     .referrer("https://www.google.com")
                     .get();
         } catch (IOException e) {

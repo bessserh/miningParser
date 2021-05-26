@@ -1,6 +1,6 @@
 package mining.software.controller;
 
-import mining.software.CalcConvert.Calc;
+import mining.software.CalcConvert.ManualCalc;
 import mining.software.model.Gpu;
 import mining.software.model.StartData;
 import org.springframework.stereotype.Controller;
@@ -14,7 +14,7 @@ public class ManualCalcController {
 
     private final StartData st = new StartData();
     private final Gpu gpu = new Gpu();
-    private Calc calculate;
+    private ManualCalc calculate;
 
     @GetMapping("/manual")
     public String mainPage(Model model) {
@@ -58,7 +58,7 @@ public class ManualCalcController {
     public String result(Model model) {
         model.addAttribute("gpu", gpu);
         model.addAttribute("startData", st);
-        calculate = new Calc(st, gpu);
+        calculate = new ManualCalc(st, gpu);
 
         model.addAttribute("calculate", calculate);
 
